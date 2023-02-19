@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import P1 from "./assets/products/AussieMite1.jpeg";
-import P2 from "./assets/products/AussieMite2.jpeg";
+import P1 from "/assets/products/AussieMite1.jpeg";
+import P2 from "/assets/products/AussieMite2.jpeg";
 import P3 from "./assets/products/AussieMite3.jpeg";
 import P4 from "./assets/products/AussieMite4.jpeg";
 import P5 from "./assets/products/AussieMite5.jpeg";
@@ -193,7 +193,7 @@ export default function Home() {
               <Slider {...settings}>
                 <div>
                   <div className="w-full">
-                    <Image
+                    <img
                       src={cover1.src}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
@@ -202,7 +202,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="w-full">
-                    <Image
+                    <img
                       src={P2.src}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
@@ -211,7 +211,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="w-full">
-                    <Image
+                    <img
                       src={cover1.src}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
@@ -230,7 +230,7 @@ export default function Home() {
                     <div key={product.id} className="group relative">
                       <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
                         <picture>
-                          <Image
+                          <img
                             src={product.imageSrc.src}
                             alt={product.imageAlt}
                             className="h-full w-full object-cover object-center shadow-lg lg:h-full lg:w-full rounded-lg hover:shadow-lg border"
@@ -283,7 +283,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div>
-                    <Image src={P5.src} alt="" />
+                    <img src={P5.src} alt="" />
                   </div>
                 </div>
               </div>
@@ -312,14 +312,14 @@ export default function Home() {
                           <div className="flex items-center space-x-6 lg:space-x-8">
                             <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                               <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                                <Image
+                                <img
                                   src={P1.src}
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
                               </div>
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <Image
+                                <img
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
@@ -328,21 +328,21 @@ export default function Home() {
                             </div>
                             <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <Image
+                                <img
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
                               </div>
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <Image
+                                <img
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
                               </div>
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <Image
+                                <img
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
@@ -351,14 +351,14 @@ export default function Home() {
                             </div>
                             <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <Image
+                                <img
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
                               </div>
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <Image
+                                <img
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
@@ -549,7 +549,7 @@ export default function Home() {
                                         className="flex py-6"
                                       >
                                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                          <Image
+                                          <img
                                             src={product.imageSrc.src}
                                             alt={product.imageAlt}
                                             className="h-full w-full object-cover object-center"
@@ -664,22 +664,22 @@ export default function Home() {
                   </dl>
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-                  <Image
+                  <img
                     src={P1.src}
                     alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
                     className="rounded-lg bg-gray-100"
                   />
-                  <Image
+                  <img
                     src={P7.src}
                     alt="Top down view of walnut card tray with embedded magnets and card groove."
                     className="rounded-lg bg-gray-100"
                   />
-                  <Image
+                  <img
                     src={P6.src}
                     alt="Side of walnut card tray with card groove and recessed card area."
                     className="rounded-lg bg-gray-100"
                   />
-                  <Image
+                  <img
                     src={P1.src}
                     alt="Walnut card tray filled with cards and card angled in dedicated groove."
                     className="rounded-lg bg-gray-100"
