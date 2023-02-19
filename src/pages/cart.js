@@ -1,5 +1,9 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import P1 from "./assets/products/AussieMite1.jpeg";
+import P2 from "./assets/products/AussieMite2.jpeg";
+import P3 from "./assets/products/AussieMite3.jpeg";
 
 const Cart = () => {
   return (
@@ -32,8 +36,8 @@ const Cart = () => {
         </div>
         <Navbar />
         <main>
-          <div class="flex justify-center my-6 pb-12">
-            <div class="flex flex-col w-full p-8 text-gray-800 bg-white shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5 rounded-md ">
+          <div class="flex justify-center my-6 pb-12 bg-white py-12">
+            <div class="flex flex-col w-full p-8 text-gray-800 bg-white shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5 rounded-md border">
               <div class="flex-1">
                 <table class="w-full text-sm lg:text-base" cellspacing="0">
                   <thead>
@@ -53,12 +57,13 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b">
+                    <tr className="border-b align-middle">
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
                           <img
-                            src="https://limg.app/i/Calm-Cormorant-Catholic-Pinball-Blaster-yM4oub.jpeg"
+                            src={P1.src}
                             class="w-20 rounded"
+                            className="h-[100px] object-cover"
                             alt="Thumbnail"
                           />
                         </a>
@@ -73,8 +78,8 @@ const Cart = () => {
                           </form>
                         </a>
                       </td>
-                      <td class="justify-center md:justify-end md:flex mt-6">
-                        <div class="w-20 h-10">
+                      <td class="">
+                        <div class="w-20 h-10 mx-auto">
                           <div class="relative flex flex-row w-full h-8">
                             <input
                               type="number"
@@ -99,9 +104,8 @@ const Cart = () => {
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
                           <img
-                            src="https://limg.app/i/Cute-Constrictor-Super-Sexy-Military-Enforcer-W7mvBp.png"
-                            class="w-20 rounded"
-                            alt="Thumbnail"
+                            src={P2.src}
+                            className="h-[100px] object-cover"
                           />
                         </a>
                       </td>
@@ -113,8 +117,8 @@ const Cart = () => {
                           </button>
                         </form>
                       </td>
-                      <td class="justify-center md:justify-end md:flex md:mt-4">
-                        <div class="w-20 h-10">
+                      <td>
+                        <div class="w-20 h-10 mx-auto">
                           <div class="relative flex flex-row w-full h-8">
                             <input
                               type="number"
@@ -139,9 +143,8 @@ const Cart = () => {
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
                           <img
-                            src="https://limg.app/i/Successful-Spider-Biblical-Mutant---Total-War-lKoE7D.jpeg"
-                            class="w-20 rounded"
-                            alt="Thumbnail"
+                            src={P3.src}
+                            className="h-[100px] object-cover"
                           />
                         </a>
                       </td>
@@ -153,8 +156,8 @@ const Cart = () => {
                           </button>
                         </form>
                       </td>
-                      <td class="justify-center md:justify-end md:flex md:mt-8">
-                        <div class="w-20 h-10">
+                      <td class="">
+                        <div class="w-20 h-10 mx-auto">
                           <div class="relative flex flex-row w-full h-8">
                             <input
                               type="number"
@@ -325,6 +328,7 @@ const Cart = () => {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     </>
   );

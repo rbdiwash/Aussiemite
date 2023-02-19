@@ -15,8 +15,9 @@ import P4 from "./assets/products/AussieMite4.jpeg";
 import P5 from "./assets/products/AussieMite5.jpeg";
 import P6 from "./assets/products/AussieMite6.jpeg";
 import P7 from "./assets/products/AussieMite7.jpeg";
-7;
-const inter = Inter({ subsets: ["latin"] });
+import cover1 from "./assets/products/Toast.jpg";
+import Slider from "react-slick";
+import Link from "next/link";
 
 export default function Home() {
   const products = [
@@ -79,6 +80,16 @@ export default function Home() {
         "Made from natural materials. Grain and color vary with each item.",
     },
   ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    autoplaySpeed: 4000,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
   return (
     <>
       <Head>
@@ -181,12 +192,42 @@ export default function Home() {
                 </svg>
               </div>
             </div>
+            <div className=" bg-white text-black">
+              <Slider {...settings}>
+                <div>
+                  <div className="w-full">
+                    <img
+                      src={cover1.src}
+                      alt=""
+                      className="h-[700px] object-cover bg-cover w-full"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="w-full">
+                    <img
+                      src={P2.src}
+                      alt=""
+                      className="h-[700px] object-cover bg-cover w-full"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="w-full">
+                    <img
+                      src={cover1.src}
+                      alt=""
+                      className="h-[700px] object-cover bg-cover w-full"
+                    />
+                  </div>
+                </div>
+              </Slider>
+            </div>
             <div className="bg-white">
               <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                 <h2 className="text-2xl font-bold tracking-tight text-gray-900">
                   Our Products
                 </h2>
-
                 <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                   {products.map((product) => (
                     <div key={product.id} className="group relative">
@@ -202,13 +243,13 @@ export default function Home() {
                       <div className="mt-4 flex justify-between">
                         <div>
                           <h3 className="text-md font-semibold text-gray-700">
-                            <a href={product.href}>
+                            <Link href={"/single"}>
                               <span
                                 aria-hidden="true"
                                 // className="absolute inset-0"
                               />
                               {product.name}
-                            </a>
+                            </Link>
                           </h3>
                           <p className="mt-1 text-sm text-gray-500">
                             {product.color}
@@ -220,6 +261,14 @@ export default function Home() {
                       </div>
                     </div>
                   ))}
+                </div>{" "}
+                <div className="mt-10 flex items-center justify-center gap-x-6">
+                  <a
+                    href="#"
+                    className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    View all Products
+                  </a>
                 </div>
               </div>
             </div>{" "}
@@ -567,14 +616,16 @@ export default function Home() {
                               <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                                 <p>
                                   or
-                                  <button
-                                    type="button"
-                                    className="font-medium text-indigo-600 hover:text-indigo-500"
-                                    onClick={() => setOpen(false)}
-                                  >
-                                    Continue Shopping
-                                    <span aria-hidden="true"> &rarr;</span>
-                                  </button>
+                                  <Link href="/cart">
+                                    <button
+                                      type="button"
+                                      className="font-medium text-indigo-600 hover:text-indigo-500"
+                                      onClick={() => setOpen(false)}
+                                    >
+                                      Continue Shopping
+                                      <span aria-hidden="true"> &rarr;</span>
+                                    </button>
+                                  </Link>
                                 </p>
                               </div>
                             </div>
