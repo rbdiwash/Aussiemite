@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import P1 from "./assets/products/AussieMite1.jpeg";
-import P2 from "./assets/products/AussieMite2.jpeg";
-import P3 from "./assets/products/AussieMite3.jpeg";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import P1 from "../assets/products/AussieMite1.jpeg";
+import P2 from "../assets/products/AussieMite2.jpeg";
+import P3 from "../assets/products/AussieMite3.jpeg";
 
 const Cart = () => {
   return (
