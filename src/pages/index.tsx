@@ -1,10 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Example from "./components/Example";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -18,6 +14,7 @@ import P7 from "./assets/products/AussieMite7.jpeg";
 import cover1 from "./assets/products/Toast.jpg";
 import Slider from "react-slick";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const products = [
@@ -196,7 +193,7 @@ export default function Home() {
               <Slider {...settings}>
                 <div>
                   <div className="w-full">
-                    <img
+                    <Image
                       src={cover1.src}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
@@ -205,7 +202,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="w-full">
-                    <img
+                    <Image
                       src={P2.src}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
@@ -214,7 +211,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="w-full">
-                    <img
+                    <Image
                       src={cover1.src}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
@@ -233,7 +230,7 @@ export default function Home() {
                     <div key={product.id} className="group relative">
                       <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
                         <picture>
-                          <img
+                          <Image
                             src={product.imageSrc.src}
                             alt={product.imageAlt}
                             className="h-full w-full object-cover object-center shadow-lg lg:h-full lg:w-full rounded-lg hover:shadow-lg border"
@@ -286,7 +283,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div>
-                    <img src={P5.src} alt="" />
+                    <Image src={P5.src} alt="" />
                   </div>
                 </div>
               </div>
@@ -315,14 +312,14 @@ export default function Home() {
                           <div className="flex items-center space-x-6 lg:space-x-8">
                             <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                               <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                                <img
+                                <Image
                                   src={P1.src}
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
                               </div>
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <img
+                                <Image
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
@@ -331,21 +328,21 @@ export default function Home() {
                             </div>
                             <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <img
+                                <Image
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
                               </div>
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <img
+                                <Image
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
                               </div>
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <img
+                                <Image
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
@@ -354,14 +351,14 @@ export default function Home() {
                             </div>
                             <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <img
+                                <Image
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
                               </div>
                               <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                <img
+                                <Image
                                   src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
                                   alt=""
                                   className="h-full w-full object-cover object-center"
@@ -552,7 +549,7 @@ export default function Home() {
                                         className="flex py-6"
                                       >
                                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                          <img
+                                          <Image
                                             src={product.imageSrc.src}
                                             alt={product.imageAlt}
                                             className="h-full w-full object-cover object-center"
@@ -667,22 +664,22 @@ export default function Home() {
                   </dl>
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-                  <img
+                  <Image
                     src={P1.src}
                     alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
                     className="rounded-lg bg-gray-100"
                   />
-                  <img
+                  <Image
                     src={P7.src}
                     alt="Top down view of walnut card tray with embedded magnets and card groove."
                     className="rounded-lg bg-gray-100"
                   />
-                  <img
+                  <Image
                     src={P6.src}
                     alt="Side of walnut card tray with card groove and recessed card area."
                     className="rounded-lg bg-gray-100"
                   />
-                  <img
+                  <Image
                     src={P1.src}
                     alt="Walnut card tray filled with cards and card angled in dedicated groove."
                     className="rounded-lg bg-gray-100"
