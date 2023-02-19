@@ -36,15 +36,21 @@ const Navbar = ({ open, setOpen }) => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            href="/products"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Products
-          </a>
+          </Link>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            href="#"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Features
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="#"
             className="text-sm font-semibold leading-6 text-gray-900"
             onClick={() => setOpen(true)}
@@ -66,19 +72,28 @@ const Navbar = ({ open, setOpen }) => {
               </svg>
               Cart
             </div>
-          </a>
+          </Link>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            href="#"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             About Us
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link
+            href="#"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Newsletter
-          </a>
+          </Link>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            href="#"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <div role="dialog" aria-modal="true">
@@ -116,41 +131,41 @@ const Navbar = ({ open, setOpen }) => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="#"
+                <Link
+                  href="/products"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                 >
                   Product
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="#"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                 >
                   Features
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="#"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                 >
                   Marketplace
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="#"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                 >
                   Company
-                </a>
+                </Link>
               </div>
               <div className="py-6">
-                <a
+                <Link
                   href="#"
                   className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                 >
                   Log in
-                </a>
+                </Link>
               </div>
             </div>
           </div>
