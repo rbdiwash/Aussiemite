@@ -1,12 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import P1 from "../assets/products/AussieMite1.jpeg";
-import P2 from "../assets/products/AussieMite2.jpeg";
-import P3 from "../assets/products/AussieMite3.jpeg";
+// import P1 from "../assets/products/AussieMite1.jpeg";
+// import P2 from "../assets/products/AussieMite2.jpeg";
+// import P3 from "../assets/products/AussieMite3.jpeg";
 import Head from "next/head";
 
 const Cart = () => {
+  const P1 = "/assets/products/AussieMite1.jpeg";
+  const P2 = "/assets/products/AussieMite2.jpeg";
+  const P3 = "/assets/products/AussieMite3.jpeg";
   return (
     <>
       <Head>

@@ -1,11 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import P1 from "../assets/products/AussieMite1.jpeg";
-import P2 from "../assets/products/AussieMite2.jpeg";
-import P3 from "../assets/products/AussieMite3.jpeg";
+// import P1 from "../public/assets/products/AussieMite1.jpeg";
+// import P2 from "../assets/products/AussieMite2.jpeg";
+// import P3 from "../assets/products/AussieMite3.jpeg";
 
 const Cart = () => {
+  const P1 = "/assets/products/AussieMite1.jpeg";
+  const P2 = "/assets/products/AussieMite2.jpeg";
+  const P3 = "/assets/products/AussieMite3.jpeg";
   return (
     <>
       <div className="isolate bg-[#eedfcd]">
@@ -61,7 +64,7 @@ const Cart = () => {
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
                           <img
-                            src={P1.src}
+                            src={P1}
                             class="w-20 rounded"
                             className="h-[100px] object-cover"
                             alt="Thumbnail"
@@ -103,10 +106,7 @@ const Cart = () => {
                     <tr className="border-b">
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
-                          <img
-                            src={P2.src}
-                            className="h-[100px] object-cover"
-                          />
+                          <img src={P2} className="h-[100px] object-cover" />
                         </a>
                       </td>
                       <td>
@@ -142,10 +142,7 @@ const Cart = () => {
                     <tr className="border-b">
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
-                          <img
-                            src={P3.src}
-                            className="h-[100px] object-cover"
-                          />
+                          <img src={P3} className="h-[100px] object-cover" />
                         </a>
                       </td>
                       <td>

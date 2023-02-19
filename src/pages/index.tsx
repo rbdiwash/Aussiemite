@@ -4,13 +4,13 @@ import Footer from "../components/Footer";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import P1 from "../assets/products/AussieMite1.jpeg";
-import P2 from "../assets/products/AussieMite2.jpeg";
-import P3 from "../assets/products/AussieMite3.jpeg";
-import P4 from "../assets/products/AussieMite4.jpeg";
-import P5 from "../assets/products/AussieMite5.jpeg";
-import P6 from "../assets/products/AussieMite6.jpeg";
-import P7 from "../assets/products/AussieMite7.jpeg";
+// import P1 from "../assets/products/AussieMite1.jpeg";
+// import P2 from "../assets/products/AussieMite2.jpeg";
+// import P3 from "../assets/products/AussieMite3.jpeg";
+// import P4 from "../assets/products/AussieMite4.jpeg";
+// import P5 from "../assets/products/AussieMite5.jpeg";
+// import P6 from "../assets/products/AussieMite6.jpeg";
+// import P7 from "../assets/products/AussieMite7.jpeg";
 import cover1 from "../assets/products/Toast.jpg";
 import Slider from "react-slick";
 import Link from "next/link";
@@ -87,6 +87,15 @@ export default function Home() {
     slidesToScroll: 1,
     arrows: true,
   };
+
+  const P1 = "/assets/products/AussieMite1.jpeg";
+  const P2 = "/assets/products/AussieMite2.jpeg";
+  const P3 = "/assets/products/AussieMite3.jpeg";
+  const P4 = "/assets/products/AussieMite4.jpeg";
+  const P5 = "/assets/products/AussieMite5.jpeg";
+  const P6 = "/assets/products/AussieMite6.jpeg";
+  const P7 = "/assets/products/AussieMite7.jpeg";
+  const cover1 = "/assets/products/AussieMite7.jpeg";
   return (
     <>
       <Head>

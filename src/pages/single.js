@@ -3,9 +3,9 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import P1 from "../assets/products/AussieMite1.jpeg";
-import P2 from "../assets/products/AussieMite2.jpeg";
-import P3 from "../assets/products/AussieMite3.jpeg";
+// import P1 from "../assets/products/AussieMite1.jpeg";
+// import P2 from "../assets/products/AussieMite2.jpeg";
+// import P3 from "../assets/products/AussieMite3.jpeg";
 const product = {
   name: "Basic Tee 6-Pack",
   price: "$192",
@@ -67,7 +67,9 @@ function classNames(...classes) {
 export default function Example() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
-
+  const P1 = "/assets/products/AussieMite1.jpeg";
+  const P2 = "/assets/products/AussieMite2.jpeg";
+  const P3 = "/assets/products/AussieMite3.jpeg";
   return (
     <div className="isolate bg-[#eedfcd]">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -266,7 +268,7 @@ export default function Example() {
                     >
                       <img
                         class="h-full w-full object-cover"
-                        src={P1.src}
+                        src={"/assets/products/AussieMite2.jpeg"}
                         alt=""
                       />
                     </button>
