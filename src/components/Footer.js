@@ -1,7 +1,8 @@
 import React from "react";
-import Logo from "../assets/images/aussiemite.png";
 
 const Footer = () => {
+  const Logo = "/assets/images/aussiemite.png";
+
   return (
     <>
       <div class="mx-auto container py-16 xl:px-20 lg:px-12 sm:px-6 px-4">
