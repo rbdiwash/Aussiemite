@@ -1,15 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 // import P1 from "../assets/products/AussieMite1.jpeg";
 // import P2 from "../assets/products/AussieMite2.jpeg";
 // import P3 from "../assets/products/AussieMite3.jpeg";
 import Head from "next/head";
-
-const Cart = () => {
+import Link from "next/link";
+import Slider from "react-slick";
+import Image from "next/image";
+import { AiFillStar } from "react-icons/ai";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
+const Product = () => {
   const P1 = "/assets/products/AussieMite1.jpeg";
   const P2 = "/assets/products/AussieMite2.jpeg";
   const P3 = "/assets/products/AussieMite3.jpeg";
+
+  const listTestimoni = [
+    {
+      name: "iezh Robert",
+      image: P1,
+      city: "Warsaw",
+      country: "Poland",
+      rating: "4.5",
+      testimoni:
+        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+    },
+    {
+      name: "iezh Robert",
+      image: P2,
+      city: "Warsaw",
+      country: "Poland",
+      rating: "4.5",
+      testimoni:
+        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+    },
+    {
+      name: "iezh Robert",
+      image: P3,
+      city: "Warsaw",
+      country: "Poland",
+      rating: "4.5",
+      testimoni:
+        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+    },
+    {
+      name: "iezh Robert",
+      image: P3,
+      city: "Warsaw",
+      country: "Poland",
+      rating: "4.5",
+      testimoni:
+        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+    },
+  ];
+  const settings = {
+    dots: true,
+    customPaging: function (i) {
+      return (
+        <a className="">
+          <span className="mx-2 rounded-l-full rounded-r-full h-4 w-4 block cursor-pointer transition-all "></span>
+        </a>
+      );
+    },
+    dotsClass: "slick-dots w-max absolute mt-20  ",
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const [sliderRef, setSliderRef] = useState(null);
   return (
     <>
       <Head>
@@ -47,7 +125,7 @@ const Cart = () => {
         <Navbar />
         <main>
           <div class="flex justify-center my-6 pb-12 bg-white py-12">
-            <div class="grid grid-cols-4 w-full p-8 text-gray-800 bg-white md:w-4/5 lg:w-4/5 gap-8">
+            <div class="grid grid-cols-4 w-full items-start justify-start p-8 text-gray-800 bg-white md:w-4/5 lg:w-4/5 gap-8">
               <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                   <img
@@ -57,11 +135,11 @@ const Cart = () => {
                   />
                 </a>
                 <div class="px-5 pb-5">
-                  <a href="#">
+                  <Link href="/single">
                     <h5 class="text-xl font-semibold tracking-tight text-gray-900">
                       Aussie Mite Diet 1
                     </h5>
-                  </a>
+                  </Link>
                   <div class="flex items-center mt-2.5 mb-5">
                     <svg
                       aria-hidden="true"
@@ -128,12 +206,9 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
-              <div class="relative max-w-sm min-w-[340px] bg-white shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer">
+              <div class="relative max-w-sm min-w-[340px] bg-white shadow-md rounded-3xl p-2 mx-1  cursor-pointer">
                 <div class="overflow-x-hidden rounded-2xl relative">
-                  <img
-                    class="h-full rounded-xl w-full object-cover"
-                    src={P2.src}
-                  />
+                  <img class="h-full rounded-xl w-full object-cover" src={P2} />
                   <p class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -152,12 +227,12 @@ const Cart = () => {
                   </p>
                 </div>
                 <div class="mt-4 pl-2 mb-2 flex justify-between ">
-                  <div>
+                  <Link href="/single">
                     <p class="text-lg font-semibold text-gray-900 mb-0">
-                      Product Name
+                      AussieMite
                     </p>
                     <p class="text-md text-gray-800 mt-0">$340</p>
-                  </div>
+                  </Link>
                   <div class="flex flex-col-reverse mb-1 mr-4 group cursor-pointer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -176,14 +251,14 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
-              <div class="relative m-10 w-full max-w-xs overflow-hidden rounded-lg bg-white shadow-md">
-                <a href="#">
+              <div class="relative w-full max-w-xs overflow-hidden rounded-lg bg-white shadow-md">
+                <Link href="/single">
                   <img
                     class="h-80 rounded-t-lg object-cover mx-auto"
-                    src={P2.src}
+                    src={P2}
                     alt="product image"
                   />
-                </a>
+                </Link>
                 <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-[#eedfcd] text-center text-sm text-black">
                   Sale
                 </span>
@@ -252,7 +327,7 @@ const Cart = () => {
                     </p>
                     <a
                       href="#"
-                      class="flex items-center rounded-md bg-[#eedfcd] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                      class="flex items-center rounded-md bg-[#f7ab4f] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#f7ab1f]focus:outline-none focus:ring-4 focus:ring-blue-300"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -283,7 +358,7 @@ const Cart = () => {
               <div class="md:flex items-center -mx-10">
                 <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
                   <div class="relative">
-                    <img src={P2.src} class="w-full relative z-10" alt="" />
+                    <img src={P2} class="w-full relative z-10" alt="" />
                     <div class="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div>
                   </div>
                 </div>
@@ -327,6 +402,70 @@ const Cart = () => {
               </div>
             </div>
           </div>
+          <div className=" bg-white   ">
+            <h1 class="text-gray-600 font-bold uppercase text-4xl mb-5 text-center pt-12">
+              Our Testimonials
+            </h1>
+            <div className="p-12 max-w-7xl mx-auto text-gray-700">
+              <Slider
+                {...settings}
+                arrows={true}
+                ref={setSliderRef}
+                className="flex items-stretch justify-items-stretch"
+              >
+                {listTestimoni?.length > 0 &&
+                  listTestimoni?.map((listTestimonis, index) => (
+                    <div className="px-3 flex items-stretch" key={index}>
+                      <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
+                        <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
+                          <div className="flex order-2 xl:order-1">
+                            <Image
+                              src={listTestimonis.image}
+                              height={50}
+                              width={50}
+                              alt="Icon People"
+                            />
+                            <div className="flex flex-col ml-5 text-left">
+                              <p className="text-lg text-black-600 capitalize">
+                                {listTestimonis.name}
+                              </p>
+                              <p className="text-sm text-black-500 capitalize">
+                                {listTestimonis.city},{listTestimonis.country}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex flex-none items-center ml-auto order-1 xl:order-2">
+                            <p className="text-sm">{listTestimonis.rating}</p>
+                            <span className="flex ml-4">
+                              <AiFillStar className="h-4 w-4" />
+                            </span>
+                          </div>
+                        </div>
+                        <p className="mt-5 text-left">
+                          “{listTestimonis.testimoni}”.
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+              </Slider>
+              <div className="flex w-full items-center justify-end">
+                <div className="flex flex-none justify-between w-auto mt-14">
+                  <div
+                    className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white transition-all text-orange-500 cursor-pointer"
+                    onClick={sliderRef?.slickPrev}
+                  >
+                    <AiOutlineArrowLeft className="h-6 w-6 " />
+                  </div>
+                  <div
+                    className="flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white transition-all text-orange-500 cursor-pointer"
+                    onClick={sliderRef?.slickNext}
+                  >
+                    <AiOutlineArrowRight className="h-6 w-6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
         <Footer />
       </div>
@@ -334,4 +473,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Product;

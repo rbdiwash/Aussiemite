@@ -6,6 +6,10 @@ import Footer from "../components/Footer";
 // import P1 from "../assets/products/AussieMite1.jpeg";
 // import P2 from "../assets/products/AussieMite2.jpeg";
 // import P3 from "../assets/products/AussieMite3.jpeg";
+
+const P1 = "/assets/products/AussieMite1.jpeg";
+const P2 = "/assets/products/AussieMite2.jpeg";
+const P3 = "/assets/products/AussieMite3.jpeg";
 const product = {
   name: "Basic Tee 6-Pack",
   price: "$192",
@@ -16,11 +20,11 @@ const product = {
   ],
   images: [
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
+      src: P1,
       alt: "Two each of gray, white, and black shirts laying flat.",
     },
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
+      src: P2,
       alt: "Model wearing plain black basic tee.",
     },
     {
@@ -67,9 +71,7 @@ function classNames(...classes) {
 export default function Example() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
-  const P1 = "/assets/products/AussieMite1.jpeg";
-  const P2 = "/assets/products/AussieMite2.jpeg";
-  const P3 = "/assets/products/AussieMite3.jpeg";
+
   return (
     <div className="isolate bg-[#eedfcd]">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -146,7 +148,7 @@ export default function Example() {
                 <img
                   src={product.images[0].src}
                   alt={product.images[0].alt}
-                  className="h-1/2 w-1/2 object-cover object-center mx-auto"
+                  className="h-1/2 w-full object-cover object-center mx-auto"
                 />
               </div>
             </div>
@@ -190,9 +192,9 @@ export default function Example() {
               </div>{" "}
               <button
                 type="submit"
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="mt-10 flex items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                Add to bag
+                Add to cart
               </button>
             </div>
           </div>
@@ -254,7 +256,7 @@ export default function Example() {
                   <div class="max-w-xl overflow-hidden rounded-lg">
                     <img
                       class="h-full w-full max-w-full object-cover"
-                      src={P2.src}
+                      src={P2}
                       alt=""
                     />
                   </div>
@@ -276,21 +278,13 @@ export default function Example() {
                       type="button"
                       class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center"
                     >
-                      <img
-                        class="h-full w-full object-cover"
-                        src={P1.src}
-                        alt=""
-                      />
+                      <img class="h-full w-full object-cover" src={P1} alt="" />
                     </button>
                     <button
                       type="button"
                       class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center"
                     >
-                      <img
-                        class="h-full w-full object-cover"
-                        src={P1.src}
-                        alt=""
-                      />
+                      <img class="h-full w-full object-cover" src={P1} alt="" />
                     </button>
                   </div>
                 </div>

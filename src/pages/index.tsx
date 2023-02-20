@@ -11,12 +11,48 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 // import P5 from "../assets/products/AussieMite5.jpeg";
 // import P6 from "../assets/products/AussieMite6.jpeg";
 // import P7 from "../assets/products/AussieMite7.jpeg";
-import cover1 from "../assets/products/Toast.jpg";
 import Slider from "react-slick";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
+  const features = [
+    { name: "Origin", description: "Designed by Good Goods, Inc." },
+    {
+      name: "Material",
+      description:
+        "Solid walnut base with rare earth magnets and powder coated steel card cover",
+    },
+    { name: "Dimensions", description: '6.25" x 3.55" x 1.15"' },
+    {
+      name: "Finish",
+      description: "Hand sanded and finished with natural oil",
+    },
+    { name: "Includes", description: "Wood card tray and 3 refill packs" },
+    {
+      name: "Considerations",
+      description:
+        "Made from natural materials. Grain and color vary with each item.",
+    },
+  ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    autoplaySpeed: 4000,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+
+  const P1 = "/assets/products/AussieMite1.jpeg";
+  const P2 = "/assets/products/AussieMite2.jpeg";
+  const P3 = "/assets/products/AussieMite3.jpeg";
+  const P4 = "/assets/products/AussieMite4.jpeg";
+  const P5 = "/assets/products/AussieMite5.jpeg";
+  const P6 = "/assets/products/AussieMite6.jpeg";
+  const P7 = "/assets/products/AussieMite7.jpeg";
+  const cover1 = "/assets/products/Toast.jpg";
   const products = [
     {
       id: 1,
@@ -57,45 +93,6 @@ export default function Home() {
 
     // More products...
   ];
-  const [open, setOpen] = useState(false);
-  const features = [
-    { name: "Origin", description: "Designed by Good Goods, Inc." },
-    {
-      name: "Material",
-      description:
-        "Solid walnut base with rare earth magnets and powder coated steel card cover",
-    },
-    { name: "Dimensions", description: '6.25" x 3.55" x 1.15"' },
-    {
-      name: "Finish",
-      description: "Hand sanded and finished with natural oil",
-    },
-    { name: "Includes", description: "Wood card tray and 3 refill packs" },
-    {
-      name: "Considerations",
-      description:
-        "Made from natural materials. Grain and color vary with each item.",
-    },
-  ];
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    autoplaySpeed: 4000,
-    fade: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-  };
-
-  const P1 = "/assets/products/AussieMite1.jpeg";
-  const P2 = "/assets/products/AussieMite2.jpeg";
-  const P3 = "/assets/products/AussieMite3.jpeg";
-  const P4 = "/assets/products/AussieMite4.jpeg";
-  const P5 = "/assets/products/AussieMite5.jpeg";
-  const P6 = "/assets/products/AussieMite6.jpeg";
-  const P7 = "/assets/products/AussieMite7.jpeg";
-  const cover1 = "/assets/products/AussieMite7.jpeg";
   return (
     <>
       <Head>
@@ -131,7 +128,7 @@ export default function Home() {
               </defs>
             </svg>
           </div>
-          <Navbar open={open} setOpen={setOpen} />
+          <Navbar />
           <main>
             <div className="relative px-6 lg:px-8">
               <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -203,7 +200,7 @@ export default function Home() {
                 <div>
                   <div className="w-full">
                     <img
-                      src={cover1.src}
+                      src={cover1}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
                     />
@@ -212,7 +209,7 @@ export default function Home() {
                 <div>
                   <div className="w-full">
                     <img
-                      src={P2.src}
+                      src={P7}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
                     />
@@ -221,7 +218,7 @@ export default function Home() {
                 <div>
                   <div className="w-full">
                     <img
-                      src={cover1.src}
+                      src={cover1}
                       alt=""
                       className="h-[700px] object-cover bg-cover w-full"
                     />
@@ -240,7 +237,7 @@ export default function Home() {
                       <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
                         <picture>
                           <img
-                            src={product.imageSrc.src}
+                            src={product.imageSrc}
                             alt={product.imageAlt}
                             className="h-full w-full object-cover object-center shadow-lg lg:h-full lg:w-full rounded-lg hover:shadow-lg border"
                           />
@@ -292,7 +289,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div>
-                    <img src={P5.src} alt="" />
+                    <img src={P5} alt="" />
                   </div>
                 </div>
               </div>
@@ -322,7 +319,7 @@ export default function Home() {
                             <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                               <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                                 <img
-                                  src={P1.src}
+                                  src={P1}
                                   alt=""
                                   className="h-full w-full object-cover object-center"
                                 />
@@ -498,151 +495,6 @@ export default function Home() {
                 </defs>
               </svg>
             </div>
-            <Transition.Root show={open} as={Fragment}>
-              <Dialog as="div" className="relative z-10" onClose={setOpen}>
-                <Transition.Child
-                  as={Fragment}
-                  enter="ease-in-out duration-500"
-                  enterFrom="opacity-0"
-                  enterTo="opacity-100"
-                  leave="ease-in-out duration-500"
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
-                >
-                  <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-                </Transition.Child>
-
-                <div className="fixed inset-0 overflow-hidden">
-                  <div className="absolute inset-0 overflow-hidden">
-                    <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                      <Transition.Child
-                        as={Fragment}
-                        enter="transform transition ease-in-out duration-500 sm:duration-700"
-                        enterFrom="translate-x-full"
-                        enterTo="translate-x-0"
-                        leave="transform transition ease-in-out duration-500 sm:duration-700"
-                        leaveFrom="translate-x-0"
-                        leaveTo="translate-x-full"
-                      >
-                        <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                          <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                            <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
-                              <div className="flex items-start justify-between">
-                                <Dialog.Title className="text-lg font-medium text-gray-900">
-                                  Shopping cart
-                                </Dialog.Title>
-                                <div className="ml-3 flex h-7 items-center">
-                                  <button
-                                    type="button"
-                                    className="-m-2 p-2 text-gray-400 hover:text-gray-500"
-                                    onClick={() => setOpen(false)}
-                                  >
-                                    <span className="sr-only">Close panel</span>
-                                    <XMarkIcon
-                                      className="h-6 w-6"
-                                      aria-hidden="true"
-                                    />
-                                  </button>
-                                </div>
-                              </div>
-
-                              <div className="mt-8">
-                                <div className="flow-root">
-                                  <ul
-                                    role="list"
-                                    className="-my-6 divide-y divide-gray-200"
-                                  >
-                                    {products.map((product) => (
-                                      <li
-                                        key={product.id}
-                                        className="flex py-6"
-                                      >
-                                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                          <img
-                                            src={product.imageSrc.src}
-                                            alt={product.imageAlt}
-                                            className="h-full w-full object-cover object-center"
-                                          />
-                                        </div>
-
-                                        <div className="ml-4 flex flex-1 flex-col">
-                                          <div>
-                                            <div className="flex justify-between text-base font-medium text-gray-900">
-                                              <h3>
-                                                <a href={product.href}>
-                                                  {product.name}
-                                                </a>
-                                              </h3>
-                                              <p className="ml-4">
-                                                {product.price}
-                                              </p>
-                                            </div>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                              {product.color}
-                                            </p>
-                                          </div>
-                                          <div className="flex flex-1 items-end justify-between text-sm">
-                                            <p className="text-gray-500">
-                                              Qty 1
-                                            </p>
-
-                                            <div className="flex">
-                                              <button
-                                                type="button"
-                                                className="font-medium text-indigo-600 hover:text-indigo-500"
-                                              >
-                                                Remove
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
-                              <div className="flex justify-between text-base font-medium text-gray-900">
-                                <p>Subtotal</p>
-                                <p>$262.00</p>
-                              </div>
-                              <p className="mt-0.5 text-sm text-gray-500">
-                                Shipping and taxes calculated at checkout.
-                              </p>
-                              <div className="mt-6">
-                                <a
-                                  href="#"
-                                  className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                                >
-                                  Checkout
-                                </a>
-                              </div>
-                              <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                                <p>
-                                  or
-                                  <Link href="/cart">
-                                    <button
-                                      type="button"
-                                      className="font-medium text-indigo-600 hover:text-indigo-500"
-                                      onClick={() => setOpen(false)}
-                                    >
-                                      Continue Shopping
-                                      <span aria-hidden="true"> &rarr;</span>
-                                    </button>
-                                  </Link>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </Dialog.Panel>
-                      </Transition.Child>
-                    </div>
-                  </div>
-                </div>
-              </Dialog>
-            </Transition.Root>
             <div className="bg-white">
               <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
                 <div>
@@ -674,22 +526,22 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
                   <img
-                    src={P1.src}
+                    src={P1}
                     alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
                     className="rounded-lg bg-gray-100"
                   />
                   <img
-                    src={P7.src}
+                    src={P7}
                     alt="Top down view of walnut card tray with embedded magnets and card groove."
                     className="rounded-lg bg-gray-100"
                   />
                   <img
-                    src={P6.src}
+                    src={P6}
                     alt="Side of walnut card tray with card groove and recessed card area."
                     className="rounded-lg bg-gray-100"
                   />
                   <img
-                    src={P1.src}
+                    src={P1}
                     alt="Walnut card tray filled with cards and card angled in dedicated groove."
                     className="rounded-lg bg-gray-100"
                   />

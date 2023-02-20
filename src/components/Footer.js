@@ -9,7 +9,7 @@ const Footer = () => {
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
           <div class="flex flex-col flex-shrink-0">
             <div class="">
-              <img class="" src={Logo.src} alt="icon" />
+              <img class="" src={Logo} alt="icon" />
             </div>
             <p class="text-sm leading-none text-gray-800 mt-4 ">
               Copyright © 2021 Ausiemite
