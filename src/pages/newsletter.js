@@ -43,7 +43,7 @@ const newsletter = () => {
           </div>
         </header>
         <nav
-          class="w-full py-4 border-t border-b bg-gray-500"
+          class="w-full py-4 border-t border-b bg-[#f18f16]"
           x-data="{ open: false }"
         >
           <div class="block sm:hidden">
@@ -57,22 +57,16 @@ const newsletter = () => {
           <div class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
             <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
               <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">
-                Technology
+                Foods
               </a>
               <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">
-                Automotive
+                Drinks
               </a>
               <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">
-                Finance
+                Vegetables
               </a>
               <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">
-                Politics
-              </a>
-              <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">
-                Culture
-              </a>
-              <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">
-                Sports
+                Cocktails
               </a>
             </div>
           </div>
@@ -88,7 +82,7 @@ const newsletter = () => {
                   href="#"
                   class="text-blue-700 text-sm font-bold uppercase pb-4"
                 >
-                  Technology
+                  Foods
                 </a>
                 <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">
                   Lorem Ipsum Dolor Sit Amet Dolor Sit Amet

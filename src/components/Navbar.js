@@ -60,7 +60,6 @@ const Navbar = () => {
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
               <img className="h-20 w-28" src={logo} alt="" />
             </Link>
           </div>
@@ -68,8 +67,8 @@ const Navbar = () => {
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setOpen(false)}
             >
-              <span className="sr-only">Open main menu</span>
               <svg
                 className="h-6 w-6"
                 fill="none"
@@ -132,7 +131,7 @@ const Navbar = () => {
               About Us
             </Link>
             <Link
-              href="#"
+              href="/newsletter"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               Newsletter
@@ -151,18 +150,13 @@ const Navbar = () => {
           <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
+                <img className="h-20 w-28" src={logo} alt="" />
               </a>
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                onClick={() => setOpen(false)}
               >
-                <span className="sr-only">Close menu</span>
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -262,7 +256,6 @@ const Navbar = () => {
                               className="-m-2 p-2 text-gray-400 hover:text-gray-500"
                               onClick={() => setOpen(false)}
                             >
-                              <span className="sr-only">Close panel</span>
                               <XMarkIcon
                                 className="h-6 w-6"
                                 aria-hidden="true"

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Image from "next/image";
 // import P1 from "../public/assets/products/AussieMite1.jpeg";
 // import P2 from "../assets/products/AussieMite2.jpeg";
 // import P3 from "../assets/products/AussieMite3.jpeg";
@@ -63,7 +64,9 @@ const Cart = () => {
                     <tr className="border-b align-middle">
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
-                          <img
+                          <Image
+                            height={100}
+                            width={100}
                             src={P1}
                             class="w-20 rounded"
                             className="h-[100px] object-cover"
@@ -106,7 +109,12 @@ const Cart = () => {
                     <tr className="border-b">
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
-                          <img src={P2} className="h-[100px] object-cover" />
+                          <Image
+                            height={100}
+                            width={100}
+                            src={P2}
+                            className="h-[100px] object-cover"
+                          />
                         </a>
                       </td>
                       <td>
@@ -142,7 +150,12 @@ const Cart = () => {
                     <tr className="border-b">
                       <td class="hidden pb-4 md:table-cell">
                         <a href="#">
-                          <img src={P3} className="h-[100px] object-cover" />
+                          <Image
+                            height={100}
+                            width={100}
+                            src={P3}
+                            className="h-[100px] object-cover"
+                          />
                         </a>
                       </td>
                       <td>

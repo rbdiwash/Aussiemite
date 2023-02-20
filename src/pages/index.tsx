@@ -11,6 +11,8 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 // import P5 from "../assets/products/AussieMite5.jpeg";
 // import P6 from "../assets/products/AussieMite6.jpeg";
 // import P7 from "../assets/products/AussieMite7.jpeg";
+import cover1 from "../../public/assets/products/Toast.jpg";
+
 import Slider from "react-slick";
 import Link from "next/link";
 
